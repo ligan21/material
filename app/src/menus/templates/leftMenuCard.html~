@@ -1,0 +1,40 @@
+    <md-menu >
+      <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-mouseenter="ul.openMenu($mdOpenMenu, $event)">
+        <md-icon md-menu-origin md-svg-icon="call:phone"></md-icon>
+      </md-button>
+      <md-menu-content ng-mouseleave="alert('mouseleave')" width="4">
+        <md-menu-item>
+          <a href="/app/indexCardTable.html">
+          <md-button >
+            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+            全部会员卡
+          </md-button>
+          </a>
+        </md-menu-item>
+        <md-menu-item>
+          <a href="/app/indexCardTypeTable.html">
+          <md-button >
+            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+            卡种类管理
+          </md-button>
+          </a>
+        </md-menu-item>
+        <md-menu-item>
+          <a href="/app/indexPresentTable.html">
+          <md-button >
+            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+            卡赠品管理
+          </md-button>
+          </a>
+        </md-menu-item>
+        <md-menu-item>
+          <a href="/app/indexCancelCardTable.html">
+          <md-button >
+            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+            退卡审批
+          </md-button>
+          </a>
+        </md-menu-item>
+
+      </md-menu-content>
+    </md-menu>

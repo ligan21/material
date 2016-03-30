@@ -1,0 +1,7 @@
+   
+<div ng-cloak>
+
+    <div ng-include="'./src/swipeCard/templates/card-detail-message.html'" ng-controller="cardDetailMessageController as Ctrl"></div>
+
+</div>
+

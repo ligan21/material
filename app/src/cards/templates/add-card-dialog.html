@@ -1,0 +1,86 @@
+<md-dialog add-item-dialog>
+  <md-dialog-content class="md-dialog-content">
+    
+    <h2 class="md-title">新增会员卡</h2>
+    
+    <p ng-if="item.form.$submitted && item.form.$invalid" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span>&nbsp; All fields are required.</span>
+    </p>
+    
+    <form name="item.form" ng-submit="ctrl.addItem()">
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>卡号</label>
+          <input name="id" ng-model="card.id" required>
+        </md-input-container>
+        <md-input-container flex>
+          <label>姓名</label>
+          <input name="name"  ng-model="card.name" required>
+        </md-input-container>
+      </div>
+      <div layout="row" class="input-row">
+         <div layout="row" flex="50">
+          <label class="md-padding">性别</label>
+          <md-radio-group ng-model="card.sex" required>
+              <md-radio-button name="male" value="true" class="md-primary">男</md-radio-button>
+              <md-radio-button name="female" value="false"> 女 </md-radio-button>
+          </md-radio-group>
+         </div >
+        <md-input-container flex="50">
+          <label>手机号</label>
+          <input name="phonenum"   ng-model="card.phonenum" required>
+        </md-input-container>
+     </div>  
+ 
+     <div layout="row" ng-controller="secondaryClassMarchantCtrl as ctrl" ng-cloak>
+          <label class="md-padding">二级商</label>
+          <md-autocomplete  
+          name="ower"
+          ng-disabled="ctrl.isDisabled"
+          md-no-cache="ctrl.noCache"
+          md-selected-item="ctrl.selectedItem"
+          md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+          md-search-text="ctrl.searchText"
+          md-selected-item-change="ctrl.selectedItemChange(item)"
+          md-items="item in ctrl.querySearch(ctrl.searchText)"
+          md-item-text="item.display"
+          md-min-length="0"
+          placeholder="二级商?"
+          ng-model="card.ower"
+          >
+          <md-item-template>
+          <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+          </md-item-template>
+          <md-not-found>
+          No  matching "{{ctrl.searchText}}" were found.
+          </md-not-found>
+          </md-autocomplete>
+     </div>
+     <div layout="row"  ng-cloak>
+            <label class="md-padding">卡种类</label>
+            <md-select name="type" ng-model="card.type" >
+              <md-option ng-repeat="type in cardTypes" value="{{type.value}}">
+                {{type.value}}
+              </md-option>
+            </md-select>
+      </div>
+
+     <div layout="row" ng-controller="PresentCtrl" ng-cloak>
+            <label class="md-padding">赠品</label>
+            <md-select  name="present" ng-model="card.present" >
+              <md-option ng-repeat="present in presents" value="{{present.value}}">
+                {{present.value}}
+              </md-option>
+            </md-select>
+      </div>
+    </form>
+    
+  </md-dialog-content>
+  
+  <div class="md-actions">
+    <md-button class="md-primary" ng-click="ctrl.addItem()" ng-disabled="item.form.$invalid">确定</md-button>
+    <md-button class="md-primary" ng-click="ctrl.cancel()">取消</md-button>
+  </div>
+  
+</md-dialog>

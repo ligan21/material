@@ -1,0 +1,18 @@
+angular.module('cards').controller('addCardController', ['$mdDialog', '$card', '$scope', function ($mdDialog, $card, $scope) {
+  'use strict';
+
+  this.cancel = $mdDialog.cancel;
+  
+  function success(card) {
+    $mdDialog.hide(card);
+  }
+  
+  this.addItem = function () {
+    $scope.item.form.$setSubmitted();
+    
+    if($scope.item.form.$valid) {
+      $card.cards.save({card: $scope.item}, success);
+    }
+  };
+  
+}]);     

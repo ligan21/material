@@ -1,0 +1,36 @@
+angular.module('cards').controller('modifyCardDetailMessageController', ['$mdDialog', '$card', '$scope','$cardType', function ($mdDialog, $card, $scope,$cardType) {
+  'use strict';
+  
+  this.cancel = $mdDialog.cancel;
+  //getCardTypes();
+  function success(card) {
+    $mdDialog.hide(card);
+  }
+  //function getCardTypes(){
+  //   $scope.promise = $cardType.cardTypes.get('', cardTypeSuccess).$promise;
+  //}
+  //function cardTypeSuccess(cardTypes){
+  //  $scope.cardTypes=cardTypes.cardTypes;
+  //}
+  this.addItem = function () {
+    //alert($scope.card.id);
+    //$scope.item.form.$setSubmitted();
+    //if($scope.item.form.$valid) {
+    //  $card.cards.save({card: $scope.card}, success);
+    //}
+    $http({
+       method  : "POST",
+       url     : "addcad",
+       data    :  $scope.card,
+       headers : {'Content-Type':'application/x-www-form-urlencoded'}
+       })
+        .success(function(data) {
+          if(data.errors){
+          }
+          else{
+          } 
+        });
+      $mdDialog.hide(card);  
+  };
+  
+}]);     

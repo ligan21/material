@@ -1,0 +1,8 @@
+angular.module('cards').factory('$card', ['$resource', function ($resource) {
+  'use strict';
+
+  return {
+    desserts: $resource('/app/src/cardTables/scripts/cards.js')
+    //desserts:$resource('./desserts.js')
+  };
+}]);

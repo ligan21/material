@@ -1,0 +1,51 @@
+   
+    <div id="cardDetail"   ng-cloak class="md-padding">
+            <div layout="row">
+              <h3 flex="50">基本资料</h3>
+              <div flex="50" layout="row" layout-align="end center"><md-button class="md-raised md-primary" ng-click="modifyItem({{secondaryClassMarchant}})">修改资料</md-button></div>
+            </div> 
+              <form name="secondaryClassMarchantDetailForm">
+               <div layout="row" class="input-row">
+                  <div layout="row" flex="50">
+                   <label class="md-padding">二级商账号:</label>
+                   <lable class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.id}}</label>
+                  </div>
+                  <div layout="row"  flex="50">
+                   <label class="md-padding" >注册时间:</label>
+                   <label class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.time}}
+                 </div>
+               </div>
+              <div layout="row" class="input-row">
+
+               <div layout="row" flex="50">
+                  <label class="md-padding">二级商名称:</label>
+                  <label class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.name}}</label>
+                </div>
+                <div layout="row" flex="50">
+                   <label class="md-padding">办卡总金额:</label>
+                   <label class="md-padding" style="font-weight:bold;color:red">{{secondaryClassMarchant.allMoney}}</label>
+
+                 </div>
+              </div>
+               <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">负责人:</label>
+                   <label class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.man}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 会员数:</label>
+                   <label class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.memberNum}}</label>
+                 </div>
+                </div>
+
+               <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">手机号:</label>
+                   <label class="md-padding" style="font-weight:bold">{{secondaryClassMarchant.phonenum}}</label>
+                 </div>
+                </div>
+
+           
+           </form>
+       <div>
+

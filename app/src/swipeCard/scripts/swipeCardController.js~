@@ -1,0 +1,7 @@
+angular.module('swipeCard').controller('swipeCardController', ['$scope', function ($scope) {
+  'use strict';
+  $scope.$on('input-card-id',function(event,id){
+     $scope.$broadcast('input-card-id',id);
+  });
+
+}]);     

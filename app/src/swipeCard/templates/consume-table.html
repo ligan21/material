@@ -1,0 +1,29 @@
+
+
+<md-table-container>
+  <table md-table md-row-select ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md-order-by="nameToLower"><span>消费流水号</span></th>
+        <th md-column md-order-by="time"><span>消费日期</span></th>
+        <th md-column md-numeric>实际消费额（元）</th>
+        <th md-column md-numeric>余额（元）</th>
+        <th md-column md-numeric>优惠金额（元）</th>
+        <th md-column >备注</th>
+
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="consume" md-select-id="{{consume.id}}" md-auto-select ng-repeat="consume in consumes.data">
+        <td md-cell>{{consume.id}}</td>
+        <td md-cell>{{consume.time}}</td>
+        <td md-cell>{{consume.realConsumption}}</td>
+        <td md-cell>{{consume.balance}}</td>
+        <td md-cell>{{consume.remarks}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{consumes.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>

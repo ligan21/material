@@ -1,0 +1,9 @@
+   
+<md-card ng-cloak>
+
+    <div ng-include="'./src/cards/templates/secondaryClassMarchant-detail-message.html'" ng-controller="secondaryClassMarchantDetailMessageController as Ctrl"></div>
+        <div class="md-padding" ng-include="'./src/secondaryClassMarchants/templates/card-table.html'" ng-controller="cardsTableController as Ctrl">
+        </div>
+ 
+</md-card>
+

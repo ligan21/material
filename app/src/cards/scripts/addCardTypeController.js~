@@ -1,0 +1,27 @@
+angular.module('cards').controller('addCardTypeController', ['$mdDialog', '$cardTypes', '$scope','$http', function ($mdDialog, $card, $scope,$http) {
+  'use strict'
+
+  this.cancel = $mdDialog.cancel;
+  
+  function success(cardType) {
+    $mdDialog.hide(cardType);
+  }
+  
+  this.addItem = function () {
+     alert($scope.cardType.name)
+     $http({
+       method  : "POST",
+       url     : "addcad",
+       data    :  $scope.cardType,
+       headers : {'Content-Type':'application/x-www-form-urlencoded'}
+       })
+        .success( function(data) {
+          if(data.errors){
+          }
+          else{
+          } 
+        });
+     $mdDialog.hide(cardType);
+  };
+  
+}]);     

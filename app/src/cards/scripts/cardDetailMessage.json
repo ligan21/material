@@ -1,0 +1,14 @@
+  {
+      "name":"张山",
+      "sex":"男",
+      "phonenum":"13532546",
+      "id": "1234567",
+      "type": "1000元5折卡 ",
+      "balance": 159.0 ,
+      "interest": 6.0 ,
+      "interestBalance":15.5,
+      "ower": "二级商",
+      "time": "2016/03/16",
+      "state": "正常",
+      "present":"微波炉价值200进价100"
+    }

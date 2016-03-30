@@ -1,0 +1,36 @@
+<md-toolbar class="md-table-toolbar md-default" ng-hide="selected.length || filter.show">
+  <div class="md-toolbar-tools">
+    <h2 class="md-title">退卡审批</h2>
+    <div flex></div>
+  </div>
+</md-toolbar>
+
+
+
+<md-table-container>
+  <table md-table md-row-select ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md-order-by="nameToLower"><span>卡号</span></th>
+        <th md-column md-numeric md-order-by="type"><span>卡种类</span></th>
+        <th md-column md-numeric>卡内余额（元）</th>
+        <th md-column md-numeric>利息余额（元）</th>
+        <th md-column >二级商</th>
+        <th md-column md-numeric>办卡时间</th>
+
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="card" md-select-id="{{card.id}}" md-auto-select ng-repeat="card in cards.data">
+        <td md-cell><a href="/app/indexApproveCancelCard.html?id={{card.id}}">{{card.id}}</a></td>
+        <td md-cell>{{card.type}}</td>
+        <td md-cell>{{card.balance}}</td>
+        <td md-cell>{{card.interest}}</td>
+        <td md-cell>{{card.ower}}</td>
+        <td md-cell>{{card.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{cards.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>

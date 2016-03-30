@@ -1,0 +1,43 @@
+<md-dialog add-item-dialog>
+  <md-dialog-content class="md-dialog-content">
+    
+    <h2 class="md-title">新增赠品</h2>
+    
+    <p ng-if="item.form.$submitted && item.form.$invalid" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span>&nbsp; All fields are required.</span>
+    </p>
+    
+    <form name="item.form" ng-submit="ctrl.addItem()">
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>赠品名称</label>
+          <input name="name" ng-model="present.name" required >
+        </md-input-container>
+      </div>
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>成本价格</label>
+          <input name="realPrice"  ng-model="present.realPrice" required>
+        </md-input-container>
+
+         <md-input-container flex>
+          <label>显示价格</label>
+          <input name="displayPrice" ng-model="present.displayPrice" required >
+        </md-input-container>
+      </div>
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>备注说明</label>
+          <input name="remarks"  ng-model="present.remarks" required>
+        </md-input-container>
+      </div>
+     </form>  
+ 
+    </md-dialog-content>
+  <div class="md-actions">
+    <md-button class="md-primary" ng-click="ctrl.addItem()" ng-disabled="item.form.$invalid">确定</md-button>
+    <md-button class="md-primary" ng-click="ctrl.cancel()">取消</md-button>
+  </div>
+  
+</md-dialog>

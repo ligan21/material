@@ -1,0 +1,98 @@
+   
+    <div id="cardDetail"   ng-cloak>
+         <div layout-padding>
+            <h3>基本资料</h3>
+            <form name="cardDetailForm">
+               <div layout="row" class="input-row">
+                  <md-input-container class="md-block" flex="50">
+                   <label>姓名:</label>
+                     <input name="id" ng-value="card.id" ng-mode="card.id" >
+                  </md-input-container>
+                  <div layout="row" flex="50">
+                    <label>性别:</label>
+                    <md-radio-group  >
+                     <md-radio-button ng-mode="card.sex" value="男" class="md-primary">男</md-radio-button>
+                     <md-radio-button ng-mode="card.sex" value="女"> 女 </md-radio-button>
+                    </md-radio-group>
+                   </div >
+               </div>
+              <div layout="row" class="input-row">
+                <div layout="row" ng-controller="secondaryClassMarchantCtrl as ctrl" ng-cloak flex="50">
+                   <label class="md-padding">二级商</label>
+                     <md-autocomplete  
+                        md-no-cache="ctrl.noCache"
+                        md-selected-item="ctrl.selectedItem"
+                        md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                        md-search-text="ctrl.searchText"
+                        md-selected-item-change="ctrl.selectedItemChange(item)"
+                        md-items="item in ctrl.querySearch(ctrl.searchText)"
+                        md-item-text="item.display"
+                        md-min-length="0"
+                        placeholder={{card.ower}}
+                        ng-model="card.ower";
+                        >
+                      <md-item-template>
+                    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                    </md-item-template>
+                     <md-not-found>
+                       No  matching "{{ctrl.searchText}}" were found.
+                       <a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
+                     </md-not-found>
+                    </md-autocomplete>
+                 </div>
+               <md-input-container class="md-block" flex="50">
+                  <label>手机号:</label>
+                  <input name="phonenum" ng-value="card.phonenum" ng-mode="card.phonenum">
+                </md-input-container>
+              </div>
+             <div layout="column" >
+               <div layout="row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">卡内余额（元）:</label>
+                   <label class="md-padding" style="font-weight:bold;color:red">{{card.balance}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding">卡号:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.id}}</label>
+
+                 </div>
+                </div>
+
+               <div layout="row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">月利息:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.interest}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 卡状态:</label>
+                   <label class="md-padding" style="font-weight:bold;color:green">{{card.state}}</label>
+                 </div>
+                </div>
+
+               <div layout="row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">利息余额:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.interestBalance}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 卡种类:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.type}}</label>
+                 </div>
+                </div>
+
+                <div layout="row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">办卡赠品:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.present}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 办卡时间:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.time}}</label>
+                 </div>
+                </div>              
+               </div>
+           </form>
+           <div flex layout="row" layout-align="end center"> <md-button class="md-raised md-primary" ng-click="modifyItem($event)">确定</md-button></a></div> 
+         </div>
+       <div>
+

@@ -1,0 +1,33 @@
+<md-toolbar class="md-table-toolbar md-default" ng-hide="selected.length || filter.show">
+  <div class="md-toolbar-tools">
+    <h2 class="md-title">办卡赠品列表</h2>
+    <div flex></div>
+    <md-button  ng-click="addItem($event)">
+     新增赠品
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-table-container>
+  <table md-table md-row-select ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md-order-by="nameToLower"><span>赠品名称</span></th>
+        <th md-column md-numeric md-order-by="type"><span>对外显示金额（元）</span></th>
+        <th md-column md-numeric>实际价格（元）</th>
+        <th md-column >备注</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="present" md-select-id="{{present.name}}" md-auto-select ng-repeat="present in presents.data">
+        <td md-cell>{{present.name}}</td>
+        <td md-cell>{{present.displayPrice}}</td>
+        <td md-cell>{{present.realPrice}}</td>
+        <td md-cell>{{present.remarks}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{presents.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>

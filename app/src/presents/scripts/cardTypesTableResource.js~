@@ -1,0 +1,8 @@
+angular.module('cardTypesTable').factory('$card', ['$resource', function ($resource) {
+  'use strict';
+
+  return {
+    cardTypes: $resource('/app/src/cardTypes/scripts/cardTypesTable.js')
+    //desserts:$resource('./desserts.js')
+  };
+}]);

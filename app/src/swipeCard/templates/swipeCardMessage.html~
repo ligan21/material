@@ -1,0 +1,41 @@
+   
+    <div id="swipeCard"   ng-cloak>
+        <form name="item.form" >
+         <div layout-padding layout="row">
+            <div layout="column">
+                <md-input-container flex>
+                  <label>卡号</label>
+                  <input name="id" ng-model="card.id" required>
+                </md-input-container>
+               <div layout="row">
+                <md-input-container flex>
+                  <label>消费金额（元）</label>
+                  <input name="money"  ng-model="card.money" required>
+               </md-input-container>
+               <md-checkbox ng-model="card.isDiscount">
+                 是否打折
+               </md-checkbox>
+              </div>
+             <div>
+               <md-input-container flex>
+                  <label>消费备注</label>
+                  <input name="remark"  ng-model="card.remark" required>
+               </md-input-container>
+             </div>
+             <div layout="column">
+               <div layout="column">
+                <label>优惠折扣</label>
+                <label>{{card.balance}}</label>
+               </div>
+               <div layout="column">
+                 <label>实收金额</label>
+                 <label>{{card.realMoney}}</label>
+               </div>
+             </div>
+             <div>
+               <button>确定刷卡</button>
+             </div>
+           </div>
+         </form>
+    </div>
+

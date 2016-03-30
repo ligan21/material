@@ -1,0 +1,57 @@
+   
+    <div id="swipeCard"   ng-cloak>
+        <form name="item.form" >
+         <div layout-padding layout="row">
+            <div layout="column">
+                <md-input-container flex>
+                  <label>卡号</label>
+                  <input name="id" ng-model="card.id" ng-blur="inputCardId()" required>
+                </md-input-container>
+               <div layout="row" flex layout-align="center center">
+                <md-input-container flex>
+                  <label>消费金额（元）</label>
+                  <input name="money"  ng-model="card.money" required>
+                </md-input-container>
+                <div flex>
+                  <md-checkbox ng-model="card.isDiscount">
+                   是否打折
+                  </md-checkbox>
+                </div>
+               </div>
+             </div>
+             <div layout="column"  >
+                <div layout="row" layout-align="start center" flex="50">
+                <md-checkbox ng-model="card.useInterest" >
+                 是否使用利息
+                </md-checkbox>
+                </div>
+                <div layout="row" layout-align="center end" flex="50" ng-show="card.useInterest">
+                <md-input-container >
+                  <label>使用金额</label>
+                  <input name="interestMoney"  ng-model="card.interestMoney" >
+                </md-input-container>
+                </div>
+             </div>
+             <div layout="column">
+               <div layout="column" layout-align="center center" flex="50">
+                <label>优惠折扣</label>
+                <label>{{card.discount}}</label>
+               </div>
+               <div layout="column" layout-align="center center" flex="50">
+                 <label>实收金额</label>
+                 <label ng-model=card.realMoney>{{card.money * (card.isDiscount?card.discount:1)/10 -(card.useInterest?card.interestMoney:0)}}</label>
+               </div>
+             </div>
+             <div layout="row" layout-align="center end" flex>
+               <md-input-container flex="100">
+                  <label>消费备注</label>
+                  <input name="remark"  ng-model="card.remark" required>
+               </md-input-container>
+             </div>
+             <div layout="row" layout-align="center none">
+               <button class="md-raised md-primary"  flex>确定刷卡</button>
+             </div>
+           </div>
+         </form>
+    </div>
+

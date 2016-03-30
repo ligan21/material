@@ -1,0 +1,76 @@
+   
+    <div id="cardDetail"   ng-cloak>
+         <div layout-padding>
+            <div layout="row">
+              <h3 flex="50">基本资料</h3>
+              <div flex="50" layout="row" layout-align="end center"><a href="/app/indexModifyCardDetail.html?id={{card.id}}"><md-button class="md-raised md-primary">修改资料</md-button></a></div>
+            </div> 
+            <div layout-padding>
+              <form name="cardDetailForm">
+               <div layout="row" class="input-row">
+                  <div layout="row" flex="50">
+                   <label class="md-padding">姓名:</label>
+                   <lable class="md-padding" style="font-weight:bold">{{card.id}}</label>
+                  </div>
+                  <div layout="row"  flex="50">
+                   <label class="md-padding" >二级商:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.ower}}
+                 </div>
+               </div>
+              <div layout="row" class="input-row">
+
+               <div layout="row" flex="50">
+                  <label class="md-padding">手机号:</label>
+                  <label class="md-padding" style="font-weight:bold">{{card.phonenum}}</label>
+                </div>
+                <div layout="row" flex="50">
+                   <label class="md-padding">卡号:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.id}}</label>
+
+                 </div>
+              </div>
+               <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">卡内余额（元）:</label>
+                   <label class="md-padding" style="font-weight:bold;color:red">{{card.balance}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 卡状态:</label>
+                   <label class="md-padding" style="font-weight:bold;color:green">{{card.state}}</label>
+                 </div>
+                </div>
+
+               <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">月利息:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.interest}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 卡种类:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.type}}</label>
+                 </div>
+                </div>
+
+               <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">利息余额:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.interestBalance}}</label>
+                 </div>
+                 <div layout="row" flex="50">
+                   <label class="md-padding"> 办卡时间:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.time}}</label>
+                 </div>
+                </div>
+
+                <div layout="row"  class="input-row">
+                 <div layout="row" flex="50">
+                   <label class="md-padding">办卡赠品:</label>
+                   <label class="md-padding" style="font-weight:bold">{{card.present}}</label>
+                 </div>
+
+                </div>   
+             </div>            
+           </form>
+         </div>
+       <div>
+

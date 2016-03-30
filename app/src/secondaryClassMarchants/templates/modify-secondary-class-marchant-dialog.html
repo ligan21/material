@@ -1,0 +1,67 @@
+   
+<md-dialog add-item-dialog>
+  <md-dialog-content class="md-dialog-content">
+    
+    <h2 class="md-title">修改二级商</h2>
+    
+    <p ng-if="item.form.$submitted && item.form.$invalid" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span>&nbsp; All fields are required.</span>
+    </p>
+
+           <form name="secondaryClassMarchantDetailForm">
+               <div layout="row" class="input-row">
+                  <div layout="row" flex="50">
+                   <md-input-container flex>
+                    <label >二级商账号:</label>
+                    <input name="id" ng-mode="secondaryClassMarchant.id" ng-value="secondaryClassMarchant.id" ng-disable>
+                   </md-input-container>
+                  </div>
+                  <div layout="row" flex="50">
+                    <md-input-container flex>
+                      <label>二级商名称</label>
+                      <input name="name"  ng-mode="secondaryClassMarchant.name" ng-value="secondaryClassMarchant.name" >
+                     </md-input-container>
+                  </div>
+
+               </div>
+              <div layout="row" class="input-row">
+                 <div layout="row" flex="50">
+                    <md-input-container flex>
+                     <label>负责人</label>
+                     <input name="man"  ng-mode="secondaryClassMarchant.man" ng-value="secondaryClassMarchant.man" >
+                    </md-input-container>
+                 </div>
+                 <div layout="row" flex="50">
+                   <md-input-container flex>
+                     <label>手机号</label>
+                     <input name="phonenum" ng-model="secondaryClassMarchant.phonenum" ng-value="secondaryClassMarchant.phonenum" >
+                   </md-input-container>
+                 </div>
+                 </div>
+               <div layout="row"  class="input-row">
+                  <div layout="row"  flex="50">
+                   <label  >注册时间:</label>
+                   <label  style="font-weight:bold">{{secondaryClassMarchant.time}}
+                 </div>
+                 <div layout="row" flex="50">
+                   <label >办卡总金额:</label>
+                   <label  style="font-weight:bold;color:red">{{secondaryClassMarchant.allMoney}}</label>
+                 </div>
+               </div>
+               <div layout="row"  class="input-row,md-padding">
+                 <div layout="row" flex="50">
+                   <label > 会员数:</label>
+                   <label style="font-weight:bold">{{secondaryClassMarchant.memberNum}}</label>
+
+                 </div>
+                </div>
+           
+           </form>
+   </md-dialog-content>
+  <div class="md-actions">
+    <md-button class="md-primary" ng-click="ctrl.addItem()" ng-disabled="item.form.$invalid">确定</md-button>
+    <md-button class="md-primary" ng-click="ctrl.cancel()">取消</md-button>
+  </div>
+</md-dialog>
+

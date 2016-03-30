@@ -1,0 +1,17 @@
+angular
+  .module('cardDetail', ['ngMaterial', 'ngMessages','$http'])
+  .controller('cardDetailController', function($scope,$http) {
+    var url = '/app/src/cards/scripts/cardDetail.js';
+    $http.get(url).success(function(response){
+       $scope.card= response;
+    });
+
+    
+
+  })
+  .config(function($mdThemingProvider) {
+    // Configure a dark theme with primary foreground yellow
+    $mdThemingProvider.theme('docs-dark', 'default')
+      .primaryPalette('yellow')
+      .dark();
+  });

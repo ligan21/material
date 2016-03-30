@@ -1,0 +1,29 @@
+
+
+<md-table-container>
+  <table md-table md-row-select ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md-order-by="nameToLower"><span>分红流水号</span></th>
+        <th md-column md-numeric md-order-by="type"><span>分红时间</span></th>
+        <th md-column md-numeric>分红日卡内余额（元）</th>
+        <th md-column md-numeric>月利率</th>
+        <th md-column >月利息（元）</th>
+        <th md-column md-numeric>利息余额（元）</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="dividends" md-select-id="{{dividends.id}}" md-auto-select ng-repeat="dividends in dividendss.data">
+        <td md-cell>{{dividends.id}}</td>
+        <td md-cell>{{dividends.time}}</td>
+        <td md-cell>{{dividends.balance}}</td>
+        <td md-cell>{{dividends.interestRate}}</td>
+        <td md-cell>{{dividends.interest}}</td>
+        <td md-cell>{{dividends.interestBalance}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{dividendss.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>

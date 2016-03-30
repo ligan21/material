@@ -1,0 +1,41 @@
+<md-toolbar class="md-table-toolbar md-default" ng-hide="selected.length || filter.show">
+  <div class="md-toolbar-tools">
+    <h2 class="md-title">二级商管理</h2>
+    <div flex></div>
+    <md-button ng-click="addItem($event)">
+      新增二级商
+    </md-button>
+  </div>
+</md-toolbar>
+
+
+
+<md-table-container>
+  <table md-table md-row-select ng-model="selected" md-progress="promise">
+    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md-order-by="nameToLower"><span>二级商账号</span></th>
+        <th md-column  md-order-by="type"><span>二级商名称</span></th>
+        <th md-column md-numeric>会员数</th>
+        <th md-column >负责人</th>
+        <th md-column >手机号</th>
+        <th md-column >注册时间</th>
+        <th md-column md-numeric>办卡总金额</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="secondaryClassMarchant" md-select-id="{{secondaryClassMarchant.id}}" md-auto-select ng-repeat="secondaryClassMarchant in secondaryClassMarchants.data">
+        <td md-cell>{{secondaryClassMarchant.id}}</td>
+        <td md-cell>{{secondaryClassMarchant.name}}</td>
+        <td md-cell>{{secondaryClassMarchant.memberNum}}</td>
+        <td md-cell>{{secondaryClassMarchant.man}}</td>
+        <td md-cell>{{secondaryClassMarchant.phonenum}}</td>
+        <td md-cell>{{secondaryClassMarchant.time}}</td>
+        <td md-cell>{{secondaryClassMarchant.allMoney}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{secondaryClassMarchants.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>c

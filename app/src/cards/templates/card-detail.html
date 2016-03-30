@@ -1,0 +1,17 @@
+   
+<div ng-cloak>
+
+    <div ng-include="'./src/cards/templates/card-detail-message.html'" ng-controller="cardDetailMessageController as Ctrl"></div>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="卡消费记录" style="font-weight:bold">
+        <div class="md-padding" ng-include="'./src/cards/templates/consume-table.html'" ng-controller="consumeTableController as Ctrl">
+        </div>
+      </md-tab>
+      <md-tab label="卡分红记录" style="font-weight:bold">
+        <div class="md-padding" ng-include="'./src/cards/templates/dividends-table.html'" ng-controller="dividendsTableController as Ctrl">
+        </div>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+

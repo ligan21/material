@@ -1,0 +1,35 @@
+   
+  <div id="modifyCardType"   ng-cloak>
+         <div layout-padding>
+            <h3>基本资料</h3>
+            <form name="modifyCardTypelForm">
+             <div layout="row" layout-padding>
+               <div layout="row" flex="50">
+                <label class="md-padding">卡种类名称:</label>
+                <label class="md-padding" style="font-weight:bold"> {{cardType.name}}</label>
+               </div>
+             <div layout="row" flex="50">
+               <label class="md-padding">卡金额:</label>
+               <label class="md-padding" style="font-weight:bold"> {{cardType.totalMoney}}</label>
+             </div>
+            </div>
+            <div layout="row" layout-padding>
+              <md-input-container flex >
+                <label>折扣率</label>
+                <input name="discount" ng-model="cardType.discount"  ng-value="cardType.discount">
+              </md-input-container>
+              <md-input-container flex >
+                 <label >月利息</label>
+                 <input name="interest"  ng-model="cardType.interest" ng-value="cardType.interest">
+              </md-input-container>
+            </div>
+
+           </form>
+       </div>
+  
+  
+  <div class="md-actions" layout="row" layout-align="end center">
+    <md-button class="md-raised md-primary" ng-click="ctrl.modifyItem()" ng-disabled="item.form.$invalid">确定</md-button>
+  </div>
+  
+</md-dialog>

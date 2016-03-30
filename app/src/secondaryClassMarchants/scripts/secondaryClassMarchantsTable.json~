@@ -1,0 +1,78 @@
+{
+  "count": 9,
+  "data": [
+    {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544"
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }, {
+      "id": "1234567",
+      "name": "二级商 ",
+      "memberNum": 159,
+      "man": "二级商" ,
+      "phonenum": "1234567",
+      "time": "2016/03/16",
+      "allMoney": 4544
+    }
+  ]
+}

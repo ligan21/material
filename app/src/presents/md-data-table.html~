@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nutritionApp">
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>md-data-table</title>
+    
+    <link rel="stylesheet" href="../../../node_modules/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="../../../node_modules/angular-material-data-table/dist/md-data-table.css">
+    <link href="../../src/tables/styles/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="../../src/tables/styles/app.css" rel="stylesheet" type="text/css"/>
+    
+  </head>
+
+  <body layout="column">
+    
+    <md-toolbar>
+      <div class="md-toolbar-tools" layout-align="space-between">
+        <div class="md-title">Material Design Data Table</div>
+      </div>
+    </md-toolbar>
+    
+    <md-content layout="column" flex>
+      
+      <md-card ng-include="'templates/nutrition-table.html'" ng-controller="nutritionController"></md-card>
+      
+      <footer layout="column" layout-align="end">
+        <footer-content layout="row" layout-align="start center" layout-wrap>
+          <div layout="row" layout-align="start center">
+            <span>Made with&nbsp;</span><md-icon class="material-icons md-18">favorite</md-icon><span>&nbsp;by Daniel Nagy</span>
+          </div>
+          <div layout="row" layout-align="start center">
+            <div>Version 0.9.11</div>
+            <a href="https://github.com/daniel-nagy/md-data-table" target="_blank">GitHub</a>
+          </div>
+        </footer-content>
+      </footer>
+      
+    </md-content>
+    
+    <script src="../../../node_modules/angular/angular.js"></script>
+    <script src="../../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="../../../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="../../../node_modules/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="../../../node_modules/angular-material/angular-material.js"></script>
+    <script src="../../../node_modules/angular-material-data-table/dist/md-data-table.js"></script>
+    
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/addItemController.js"></script>
+    <script type="text/javascript" src="scripts/deleteController.js"></script>
+    <script type="text/javascript" src="scripts/nutritionController.js"></script>
+    <script type="text/javascript" src="scripts/authorizeResource.js"></script>
+    <script type="text/javascript" src="scripts/nutritionResource.js"></script>
+    
+  </body>
+</html>

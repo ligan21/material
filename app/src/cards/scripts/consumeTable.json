@@ -1,0 +1,63 @@
+{
+  "count": 9,
+  "data": [
+    {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }, {
+      "id": "1234567",
+      "type": "1000元5折卡 ",
+      "balance": 159.0 ,
+      "interest": 6.0 ,
+      "ower": "二级商",
+      "time": "2016/03/16",
+      "state": "正常"
+    }, {
+      "id": "1234567",
+      "time": "2016/03/03",
+      "realConsumption": 159.0 ,
+      "balance": 6.0 ,
+      "remarks": "二级商"
+    }
+  ]
+}
